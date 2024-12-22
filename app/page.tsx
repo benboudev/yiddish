@@ -7,7 +7,7 @@ interface Article {
   h1: string
   p: string
   img: string
-  a: string
+  audio: string
 }
 
 interface ApiResponse {
@@ -85,8 +85,8 @@ export default function Home() {
             </div>
           )}
           <p className="text-gray-700">{article.p}</p>
-          {article.a && (
-            <a href={article.a} className="text-blue-500 hover:underline">
+          {article.audio && (
+            <a href={article.audio} className="text-blue-500 hover:underline">
               Read more
             </a>
           )}
