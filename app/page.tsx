@@ -7,7 +7,8 @@ interface Article {
   h1: string
   p: string
   img: string
-  audio: string
+  link: string
+  songUrl: string
 }
 
 interface ApiResponse {
@@ -85,10 +86,21 @@ export default function Home() {
             </div>
           )}
           <p className="text-gray-700">{article.p}</p>
-          {article.audio && (
-            <a href={article.audio} className="text-blue-500 hover:underline">
+          {article.link && (
+            <a href={article.link} className="text-blue-500 hover:underline">
               Read more
             </a>
+          )}
+          {article.songUrl && (
+            <div className="mt-4">
+              <audio controls>
+                <source src={article.songUrl} type="audio/mpeg" />
+                Your browser does not support the audio element.
+              </audio>
+              <p className="text-sm text-gray-500 mt-2">
+                Audio source: <a href="https://www.yiddish24.com" className="text-blue-500 hover:underline">yiddish24.com</a>
+              </p>
+            </div>
           )}
         </div>
       ))}

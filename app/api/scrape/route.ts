@@ -30,7 +30,8 @@ export async function GET() {
         h1: $element.find('h1').text().trim(),
         p: $element.find('p').text().trim(),
         img: $element.find('img').attr('src') || '',
-        audio: $element.find('.button-sections .aeroBtn').attr('data-url') || ''
+        link: $element.find('.button-sections .aeroBtn').attr('data-url') || '',
+        songUrl: $element.find('.playing-panel').attr('data-song-url') || ''
       }
     }).get()
 
