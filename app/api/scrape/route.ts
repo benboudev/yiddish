@@ -29,7 +29,8 @@ export async function GET() {
       return {
         h1: $element.find('h1').text().trim(),
         p: $element.find('p').text().trim(),
-        img: $element.find('img').attr('src') || ''
+        img: $element.find('img').attr('src') || '',
+        a: $element.find('.button-sections .aeroBtn').attr('data-url') || ''
       }
     }).get()
 
