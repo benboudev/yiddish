@@ -31,7 +31,8 @@ export async function GET() {
         p: $element.find('p').text().trim(),
         img: $element.find('img').attr('src') || '',
         link: $element.find('.button-sections .aeroBtn').attr('data-url') || '',
-        songUrl: $element.find('.playing-panel').attr('data-song-url') || ''
+        songUrl: $element.find('.playing-panel').attr('data-song-url') || '',
+        songNumber: $element.find('.playing-panel').attr('data-id') || ''
       }
     }).get()
 
